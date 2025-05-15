@@ -84,7 +84,8 @@ public class Controle {
                 if (produto.getNome().equalsIgnoreCase(nome)){
                     quantidade = parseInt(showInputDialog("Qual a quantidade?"));
                         if (produto.getQuantidadeEmEstoque() >= quantidade) {
-                            nf.adicionarItem(new ItemProduto(produto ));
+                            nf.adicionarItem(new ItemProduto(produto, quantidade));
+                            produto.debitarEstoque(quantidade);
                         }
                 }
 
