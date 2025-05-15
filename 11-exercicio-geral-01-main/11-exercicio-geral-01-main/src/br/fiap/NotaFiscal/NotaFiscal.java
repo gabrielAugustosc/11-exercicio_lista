@@ -2,6 +2,7 @@ package br.fiap.NotaFiscal;
 
 import br.fiap.cliente.Cliente;
 import br.fiap.item.ItemProduto;
+import br.fiap.produto.Produto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,5 +41,13 @@ public class NotaFiscal {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public void removerProduto(Produto produto) {
+        for (ItemProduto item : listaItem) {
+            if (item.getProduto().equals(produto)){
+                listaItem.remove(item);
+            }
+        }
     }
 }

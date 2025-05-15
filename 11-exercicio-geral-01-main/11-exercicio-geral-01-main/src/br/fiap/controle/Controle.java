@@ -95,6 +95,8 @@ public class Controle {
     }
 
     private void removerProduto() {
+       String nome = showInputDialog("Qual o produto será removido? ");
+       nf.removerProduto(new Produto(nome));
     }
 
 

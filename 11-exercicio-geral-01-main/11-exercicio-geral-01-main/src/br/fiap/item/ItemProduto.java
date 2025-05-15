@@ -26,4 +26,8 @@ public class ItemProduto {
     public double calcularTotal() {
         return produto.getValorUnitario() * quantidadeComprada;
     }
+
+    public Object getProduto() {
+        return produto;
+    }
 }
